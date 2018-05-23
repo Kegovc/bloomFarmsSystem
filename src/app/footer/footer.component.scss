@@ -1,0 +1,27 @@
+footer{
+  bottom: 0px;
+  z-index: 20;
+  width: 100%;
+  @media screen and (min-width: 691px) {
+    position: fixed;
+  }
+  address{
+    background-color: #98cf3e;
+    padding: 10px 0px;
+    margin: 0px;
+    .row{
+      color: black;
+      font-family: 'Times New Roman', Times, serif;
+      div{
+        .logo_bloom{
+          width: 100%;
+        }
+        p{
+          display: inline-block;
+          margin: 0px
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 791px) {@media screen and (max-width: 691px) {@media screen and (max-width: 575px) {}}}

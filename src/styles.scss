@@ -1,0 +1,101 @@
+/* You can add global styles to this file, and also import other style files */
+body,h1,h2,h3,h4,h5,h6 {    font-family: Verdana,sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    div{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+      span{
+        color: #842063!important;
+        font-size: 25px;
+        line-height: 1.5;
+        background-color: #ffffffb5;
+        padding: 10px;
+        border-radius: 32px;
+        @media screen and (min-width: 575px) {
+          letter-spacing: 10px;
+          font-weight: bold;
+          font-size: 37px;
+        }
+      }
+    }
+
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('assets/parallax1.jpg');
+    min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("assets/parallax2.png");
+    min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("assets/parallax3.jpg");
+    min-height: 400px;
+}
+
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+
+.is-invalid{
+  background-color: #D32F2F;
+  color: #FAFAFA;
+  border-color: #D32F2F!important;
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fafafa;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #fafafa;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #fafafa;
+}
+}
+.is-valid{
+  background-color: #76FF03;
+  color: #FAFAFA;
+  border-color: #76FF03!important;
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fafafa;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #fafafa;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #fafafa;
+}
+}
+.opacity{
+  opacity: .9 ;
+}
