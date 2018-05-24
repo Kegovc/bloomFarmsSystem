@@ -1,3 +1,15 @@
+$col-1:    8.33333333333%;
+$col-2:   16.6666666667%;
+$col-3:   25%;
+$col-4:   33.33333333333%;
+$col-5:   41.6666666667%;
+$col-6:   50%;
+$col-7:   58.33333333333%;
+$col-8:   66.6666666667%;
+$col-9:   75%;
+$col-10:  83.33333333333%;
+$col-11:  91.6666666667%;
+$col-12:  100%;
 footer{
   bottom: 0px;
   z-index: 20;
@@ -7,18 +19,111 @@ footer{
   }
   address{
     background-color: #98cf3e;
-    padding: 10px 0px;
+    @media screen and (min-width: 995px) {
+      padding: 10px 0px;
+    }
     margin: 0px;
-    .row{
+    .container-footer{
       color: black;
       font-family: 'Times New Roman', Times, serif;
-      div{
-        .logo_bloom{
-          width: 100%;
+      .helper {
+        vertical-align: middle;
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+        &:nth-child(1){
+          @media screen and (min-width: 1030px) {
+            width: $col-1;//col-1;
+            flex: 0 0 $col-1;
+          }
+          @media screen and (max-width: 1030px) {
+            width: $col-2;//col-2;
+            flex: 0 0 $col-2;
+          }
+          @media screen and (max-width: 872px) {
+            width: $col-3;//col-2;
+            flex: 0 0 $col-3;
+          }
+        }
+        &:nth-child(2){
+          @media screen and (min-width: 1030px) {
+            width: $col-3;//col-2;
+            flex: 0 0 $col-3;
+          }
+          @media screen and (max-width: 1030px) {
+            width: $col-3;//col-2;
+            flex: 0 0 $col-3;
+          }
+          @media screen and (max-width: 872px) {
+            width: $col-9;//col-2;
+            flex: 0 0 $col-9;
+            display: block;
+          }
+        }
+        &:nth-child(3){
+          @media screen and (min-width: 1030px) {
+            width: $col-5;//col-5;
+            flex: 0 0 $col-5;
+          }
+          @media screen and (max-width: 1030px) {
+            width: $col-3;//col-2;
+            flex: 0 0 $col-3;
+          }
+          @media screen and (max-width: 872px) {
+            width: $col-9;//col-2;
+            flex: 0 0 $col-9;
+            display: block;
+            left: $col-3;
+          }
+        }
+        &:nth-child(4){
+          @media screen and (min-width: 1030px) {
+            width: $col-2;//col-2;
+            flex: 0 0 $col-2;
+          }
+          @media screen and (max-width: 1030px) {
+            width: $col-2;//col-2;
+            flex: 0 0 $col-2;
+          }
+          @media screen and (max-width: 872px) {
+            width: $col-9;//col-2;
+            flex: 0 0 $col-9;
+            display: block;
+            left: $col-3;
+          }
         }
         p{
-          display: inline-block;
-          margin: 0px
+          &:first-child{
+            @media screen and (min-width: 873px) {
+              display: block!important;
+            }
+            @media screen and (max-width: 872px) {
+              display: inline-block;
+            }
+          }
+          &:nth-child(odd), &:nth-child(even) {
+            display: inline-block;
+          }
+          margin: 0px;
+        }
+        .logo_bloom{
+          position: absolute;
+          @media screen and (min-width: 1030px) {
+            top: -45px;
+            width: 107px;
+          }
+          @media screen and (max-width: 1030px) {
+            top: -48px;
+            width: 140px;
+          }
+          @media screen and (max-width: 691px) {
+            width: 130px;
+          }
+          @media screen and (max-width: 420px) {
+            display: none;
+          }
         }
       }
     }

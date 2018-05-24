@@ -9,18 +9,18 @@
     <div class="col-sm-12 col-md-5 offset-md-1">
 
       <p>Dejanos una mensaje</p>
-      <form (submit)="doContact()" [formGroup]="contactoForm"  >
-        <div class="row">
-          <div class="col-md-6">
-            <input class="form-control" type="text" [(ngModel)]="data.nombre" [validatedInput]="errorMessages.nombre" name="nombre" formControlName="nombre"   id="nombre"  placeholder="Nombre">
+      <form (submit)="doContact()" [formGroup]="contactoForm">
+          <div class="form-group">
+              <input class="form-control" type="text" [(ngModel)]="data.nombre" [validatedInput]="errorMessages.nombre" name="nombre" formControlName="nombre"   id="nombre"  placeholder="Nombre">
           </div>
-          <div class="col-md-6">
-            <input class="form-control" type="email" [(ngModel)]="data.correo" [validatedInput]="errorMessages.correo" name="correo" formControlName="correo"   id="correo"  placeholder="Correo">
+          <div class="form-group">
+              <input class="form-control" type="email" [(ngModel)]="data.correo" [validatedInput]="errorMessages.correo" name="correo" formControlName="correo"   id="correo"  placeholder="Correo">
           </div>
-        </div>
-        <input class="form-control" type="text" [(ngModel)]="data.mensaje" [validatedInput]="errorMessages.mensaje" name="mensaje" formControlName="mensaje"   id="mensaje"  placeholder="Mensaje">
-        <button class="" type="submit">
-           SEND MESSAGE
+          <div class="form-group">
+              <textarea class="form-control" type="text" [(ngModel)]="data.mensaje" [validatedInput]="errorMessages.mensaje" name="mensaje" formControlName="mensaje"   id="mensaje"  placeholder="Mensaje"></textarea>
+          </div>
+        <button class="btn btn-success">
+           Enviar
         </button>
       </form>
     </div>
