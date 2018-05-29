@@ -2,14 +2,30 @@ img{
   width: 20%;
 }
 #about{
-  padding: 10% 0px;
-  div{
-    span{
-      img{
-        width: 170px;
-        top: -28px;
-        position: relative;
-        margin: 0 6px;
+  color: #2b265c;
+  padding: 10% 0px 0px 0px;
+  width: 100%;
+  @media screen and (max-width: 767px) {
+    padding: 10% 40px 0px 40px;
+  }
+}
+
+.propuesta{
+  width: 100%;
+  margin: 0;
+  .col{
+    .row{
+      h3{
+        text-align: center;
+        color: #842164;
+      }
+    }
+    .body-propuesta{
+      background-color: #a2192d;
+      text-align: center;
+      p{
+        padding: 0px 10px 0px 10px;
+        color: white;
       }
     }
   }

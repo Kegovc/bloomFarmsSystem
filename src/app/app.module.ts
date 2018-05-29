@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { CarouselModule } from 'ngx-bootstrap';
 
 
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { PortafolioComponent } from './portafolio/portafolio.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
+
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import { NosotrosComponent } from './nosotros/nosotros.component';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    CarouselModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

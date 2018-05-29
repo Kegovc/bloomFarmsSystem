@@ -1,58 +1,38 @@
 <div class="bgimg-2 opacity">
     <div>
-      <span>PORTFOLIO</span>
+      <span>PORTAFOLIO</span>
     </div>
   </div>
 
 <!-- Container (Portfolio Section) -->
-<!--div class="" id="portfolio">
-    <h3 class="">MY WORK</h3>
-    <p class=""><em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p><br>
-
-
-    <div class="">
-      <div class=" m3">
-        <img src="./assets/p1.jpg" class="" alt="The mist over the mountains">
-      </div>
-
-      <div class=" m3">
-        <img src="./assets/p2.jpg" class="" alt="Coffee beans">
-      </div>
-
-      <div class=" m3">
-        <img src="./assets/p3.jpg" class="" alt="Bear closeup">
-      </div>
-
-      <div class=" m3">
-        <img src="./assets/p4.jpg" class="" alt="Quiet ocean">
-      </div>
-    </div>
-
-    <div class="">
-      <div class=" m3">
-        <img src="./assets/p5.jpg" class="" alt="The mist">
-      </div>
-
-      <div class=" m3">
-        <img src="./assets/p6.jpg" class="" alt="My beloved typewriter">
-      </div>
-
-      <div class=" m3">
-        <img src="./assets/p7.jpg" class="" alt="Empty ghost train">
-      </div>
-
-      <div class=" m3">
-        <img src="./assets/p8.jpg" class="" alt="Sailing">
-      </div>
-      <button class="" style="margin-top:64px">LOAD MORE</button>
-    </div>
-  </div-->
-
-  <!-- Modal for full size images on click-->
-  <!--div id="modal01" class="" onclick="this.style.display='none'">
-    <span class="" title="Close Modal Image"></span>
-    <div class="">
-      <img id="img01" class="">
-      <p id="caption" class=""></p>
-    </div>
-  </div-->
+<div class="" id="portfolio">
+    <carousel [noPause]="noPause">
+        <slide>
+          <img src="assets/p1.jpg" alt="First slide" style="display: block; ">
+        </slide>
+        <slide>
+          <img src="assets/p2.jpg" alt="First slide" style="display: block; ">
+        </slide>
+        <slide>
+          <img src="assets/p3.jpg" alt="First slide" style="display: block; ">
+        </slide>
+        <slide>
+          <img src="assets/p4.jpg" alt="First slide" style="display: block; ">
+        </slide>
+        <slide>
+          <img src="assets/p5.jpg" alt="First slide" style="display: block; ">
+        </slide>
+        <slide>
+          <img src="assets/p6.jpg" alt="First slide" style="display: block; ">
+        </slide>
+        <slide>
+          <img src="assets/p7.jpg" alt="First slide" style="display: block; ">
+        </slide>
+        <slide>
+          <img src="assets/p8.jpg" alt="First slide" style="display: block; ">
+        </slide>
+        <slide>
+            <iframe src="https://www.youtube.com/embed/j8nNQR80aUw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </slide>
+      </carousel>
+</div>

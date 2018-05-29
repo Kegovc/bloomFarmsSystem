@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  @ViewChild('videoPlayer') videoplayer: any;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  onClickVideo() {
+    if (this.videoplayer.nativeElement.paused) {
+      this.videoplayer.nativeElement.play();
+    } else {
+      this.videoplayer.nativeElement.pause();
+    }
+  }
 }
