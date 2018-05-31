@@ -14,6 +14,7 @@ export class NavbarComponent implements OnInit, AfterViewChecked {
   ngOnInit() {}
 
   ngAfterViewChecked() {
+    console.log(this.videoplayer.nativeElement.paused);
       this.videoplayer.nativeElement.play();
   }
 
