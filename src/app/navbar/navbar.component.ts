@@ -1,11 +1,11 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewChecked } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit, AfterViewInit {
+export class NavbarComponent implements OnInit, AfterViewChecked {
 
   @ViewChild('videoPlayer') videoplayer: any;
 
@@ -13,9 +13,8 @@ export class NavbarComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {}
 
-  ngAfterViewInit(){
+  ngAfterViewChecked() {
       this.videoplayer.nativeElement.play();
-      alert("hola");
   }
 
   onClickVideo() {
