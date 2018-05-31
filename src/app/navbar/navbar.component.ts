@@ -12,9 +12,8 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    if (this.videoplayer.nativeElement.paused) {
       this.videoplayer.nativeElement.play();
-    }
+      alert('hola');
   }
 
   onClickVideo() {
