@@ -1,11 +1,11 @@
-import { Component, OnInit, ViewChild, AfterViewChecked } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewChecked, DoCheck } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit, AfterViewChecked {
+export class NavbarComponent implements OnInit, AfterViewChecked,DoCheck {
 
   @ViewChild('videoPlayer') videoplayer: any;
 
@@ -13,9 +13,12 @@ export class NavbarComponent implements OnInit, AfterViewChecked {
 
   ngOnInit() {}
 
+  ngDoCheck(){
+    console.log(this.videoplayer.nativeElement.paused);
+  }
+
   ngAfterViewChecked() {
     console.log(this.videoplayer.nativeElement.paused);
-      this.videoplayer.nativeElement.play();
   }
 
   onClickVideo() {
