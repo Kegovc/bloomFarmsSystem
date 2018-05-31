@@ -5,7 +5,7 @@ import { Component, OnInit, ViewChild, AfterViewChecked, DoCheck } from '@angula
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit, AfterViewChecked,DoCheck {
+export class NavbarComponent implements OnInit, AfterViewChecked, DoCheck {
 
   @ViewChild('videoPlayer') videoplayer: any;
 
@@ -13,12 +13,18 @@ export class NavbarComponent implements OnInit, AfterViewChecked,DoCheck {
 
   ngOnInit() {}
 
-  ngDoCheck(){
+  ngDoCheck() {
     console.log(this.videoplayer.nativeElement.paused);
+    if (this.videoplayer.nativeElement.paused) {
+      this.videoplayer.nativeElement.play();
+    }
   }
 
   ngAfterViewChecked() {
     console.log(this.videoplayer.nativeElement.paused);
+    if (this.videoplayer.nativeElement.paused) {
+      this.videoplayer.nativeElement.play();
+    }
   }
 
   onClickVideo() {
