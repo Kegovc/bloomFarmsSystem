@@ -23,7 +23,7 @@ export class NavbarComponent implements OnInit, AfterViewChecked, DoCheck {
   ngAfterViewChecked() {
     console.log(this.videoplayer.nativeElement.paused);
     if (this.videoplayer.nativeElement.paused) {
-      this.videoplayer.nativeElement.play();
+      this.videoplayer.nativeElement.play().ToPromices();
     }
   }
 
@@ -35,3 +35,5 @@ export class NavbarComponent implements OnInit, AfterViewChecked, DoCheck {
     }
   }
 }
+
+
