@@ -17,7 +17,6 @@ export class NavbarComponent implements OnInit {
       this.videoplayer.nativeElement.play().ToPromices();
     }
   }
-
   onClickVideo() {
     if (this.videoplayer.nativeElement.paused) {
       this.videoplayer.nativeElement.play();
